@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 
 async function main() {
-    const data = await fs.readFile("./input.txt", { encoding: "utf8" })
+    const data = await fs.readFile("./sample.txt", { encoding: "utf8" }) // read from the file
     const parsed = data.trim().split('\n').map((str) => str.split(','));
     const surface_area = parsed.length * 6;
     let joined = 0;
@@ -10,7 +10,7 @@ async function main() {
     for (let i = 0; i < parsed.length; i++) {
         const ref_cube = parsed[i]
 
-        for (let j = i + 1; j < parsed.length; j++) {
+        for (let j = i + 1; j < parsed.length; j++) {   // [ [1,2,3], [1,2,4], [1,3,3] ]
             const curr_cube = parsed[j]
             incremented = false;
 
