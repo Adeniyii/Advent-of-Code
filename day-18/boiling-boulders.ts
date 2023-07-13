@@ -26,7 +26,7 @@ async function main() {
                             if (Math.abs(Number.parseInt(ref_cube[left_over_idx]) - Number.parseInt(curr_cube[left_over_idx])) === 1) {
                                 joined +=2;
                                 incremented = true;
-                break;
+                                break;
                             }
                         }
                     }
